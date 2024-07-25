@@ -1,6 +1,11 @@
 def add_one(some_list):
-    num = int(''.join(map(str, some_list)))
+    # Перетворюємо кожну цифру у строку та об'єднуємо їх у рядок
+    num_str = int(''.join(map(str, some_list)))
+    # перетворюємо рядок чисел в ціле число
+    num = int(num_str)
+    # додаємо одиницю
     num += 1
+    # розбиваємо числа на цифри та перетворюємо їх знову в список цілих чисел
     result = list(map(int, str(num)))
     return result
 
